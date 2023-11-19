@@ -829,6 +829,7 @@ module Git
 
       arr_opts = []
       arr_opts << '-b' if opts[:new_branch] || opts[:b]
+      arr_opts << '--orphan' if opts[:orphan] || opts[:o]
       arr_opts << '--force' if opts[:force] || opts[:f]
       arr_opts << branch if branch
       arr_opts << opts[:start_point] if opts[:start_point] && arr_opts.include?('-b')
